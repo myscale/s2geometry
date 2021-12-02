@@ -22,10 +22,13 @@
 #include <memory>
 #include <set>
 #include <string>
+
 #include <gtest/gtest.h>
+
+#include "absl/memory/memory.h"
+#include "absl/strings/string_view.h"
+
 #include "s2/base/integral_types.h"
-#include "s2/third_party/absl/memory/memory.h"
-#include "s2/third_party/absl/strings/string_view.h"
 #include "s2/mutable_s2shape_index.h"
 #include "s2/s2debug.h"
 #include "s2/s2text_format.h"
@@ -39,6 +42,7 @@ using s2textformat::MakePointOrDie;
 using s2textformat::MakePolylineOrDie;
 using std::map;
 using std::set;
+using std::string;
 using std::vector;
 
 using EdgeType = S2Builder::EdgeType;

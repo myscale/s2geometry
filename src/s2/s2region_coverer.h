@@ -24,7 +24,7 @@
 #include <utility>
 #include <vector>
 
-#include "s2/third_party/absl/base/macros.h"
+#include "absl/base/macros.h"
 #include "s2/_fp_contract_off.h"
 #include "s2/s2cell.h"
 #include "s2/s2cell_id.h"
@@ -179,7 +179,7 @@ class S2RegionCoverer {
   // Returns an S2CellUnion that covers (GetCovering) or is contained within
   // (GetInteriorCovering) the given region and satisfies the current options.
   //
-  // Note that if options().min_level() > 0 or options().level_mod() > 1, the
+  // Note that if options().min_level() > 0 or options().level_mod() > 1, then
   // by definition the S2CellUnion may not be normalized, i.e. there may be
   // groups of four child cells that can be replaced by their parent cell.
   S2CellUnion GetCovering(const S2Region& region);
