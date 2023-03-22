@@ -292,24 +292,24 @@ template <class T> struct BitPattern {
 inline int Bits::Log2Floor(uint32 n) { return absl::bit_width(n) - 1; }
 
 inline int Bits::Log2FloorNonZero(uint32 n) {
-  ABSL_INTERNAL_ASSUME(n != 0);
+  ABSL_ASSUME(n != 0);
   return absl::bit_width(n) - 1;
 }
 
 inline int Bits::Log2Floor64(uint64 n) { return absl::bit_width(n) - 1; }
 
 inline int Bits::Log2FloorNonZero64(uint64 n) {
-  ABSL_INTERNAL_ASSUME(n != 0);
+  ABSL_ASSUME(n != 0);
   return absl::bit_width(n) - 1;
 }
 
 inline int Bits::FindLSBSetNonZero(uint32 n) {
-  ABSL_INTERNAL_ASSUME(n != 0);
+  ABSL_ASSUME(n != 0);
   return absl::countr_zero(n);
 }
 
 inline int Bits::FindLSBSetNonZero64(uint64 n) {
-  ABSL_INTERNAL_ASSUME(n != 0);
+  ABSL_ASSUME(n != 0);
   return absl::countr_zero(n);
 }
 
